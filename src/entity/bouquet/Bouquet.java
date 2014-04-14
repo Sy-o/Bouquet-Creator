@@ -40,6 +40,14 @@ public class Bouquet {
         return null;
     }
 
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result * this.getName().length();
+        result += result * prime + 172447 * ((this.packing.getType().length() > 7) ? 1 : 0);
+        return result;
+    }
+
     @Override
     public String toString(){
         StringBuilder str = new StringBuilder();
