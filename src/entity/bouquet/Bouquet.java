@@ -40,5 +40,21 @@ public class Bouquet {
         return null;
     }
 
+    @Override
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+        String NEWLINE = System.getProperty("line.separator");
+        str.append(this.getClass().getName() + " Object {" + NEWLINE);
+        str.append("  flowers: ");
+        for(Flower flower: flowers){
+            str.append(flower.getName() + " ");
+        }
+        str.append(NEWLINE);
+        str.append("  packing: " + packing.getType() + NEWLINE);
+        str.append("}");
+        return str.toString();
+    }
+
+
     
 }
